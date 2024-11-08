@@ -44,29 +44,35 @@ Save code files as you go to avoid mistakes and losing data.
 
 Code the actions the Login 
 
-<img width="711" alt="Screenshot 2024-11-02 at 7 24 56 PM" src="https://github.com/user-attachments/assets/142e8d8f-e329-4d6c-8824-6b5fec39245f">
+<img width="748" alt="Code that actions the login " src="https://github.com/user-attachments/assets/f240aece-1e13-45fa-9edc-ad2aa7342613">
+
 
 Code that authenticates the Login 
 
-<img width="699" alt="Screenshot 2024-11-02 at 7 19 22 PM" src="https://github.com/user-attachments/assets/c9324e38-af65-4ddb-b728-76a4b69a5592">
+<img width="761" alt="Code to authenticate 1 " src="https://github.com/user-attachments/assets/c3136cbe-7bc1-4794-be84-64084e6d92b2">
 
-<img width="706" alt="Screenshot 2024-11-02 at 7 21 20 PM" src="https://github.com/user-attachments/assets/8e279f43-76f2-47e9-8b5e-c01216c4ad09">
+<img width="758" alt="Code to authenticate 2 " src="https://github.com/user-attachments/assets/dbc7ed60-4491-4572-af8e-b44f9f8e08ec">
 
-Code that changes in the view 
 
- #### Navigation Stack and Destination
+Code that changes the page view 
+
+ ##### Navigation Stack and Destination
  
-<img width="635" alt="Screenshot 2024-11-02 at 5 31 59 PM" src="https://github.com/user-attachments/assets/4ca4d2f5-8f52-4136-890b-7b64a6a4ebef">
+<img width="761" alt="Navigation Stack 1 " src="https://github.com/user-attachments/assets/668ece65-c34b-4bbc-a36f-492c28bb41ce">
 
-<img width="972" alt="Screenshot 2024-11-02 at 7 08 52 PM" src="https://github.com/user-attachments/assets/1da5ddd9-bdd5-44e0-96df-822d4e1ba17c">
+
+<img width="766" alt="Navigation Stack 2 " src="https://github.com/user-attachments/assets/6f58974e-56ed-487e-a8af-54f8fba4b1c0">
+
 
 Code that filters the search 
 
-<img width="912" alt="Screenshot 2024-11-02 at 7 29 47 PM" src="https://github.com/user-attachments/assets/a346e207-57d6-4ad5-a810-cb48c35342a8">
+<img width="756" alt="Code that filters search " src="https://github.com/user-attachments/assets/e134c525-4173-440d-b07d-1b1c56ee8fd4">
 
-Return of of Variables stated
 
-<img width="913" alt="Screenshot 2024-11-02 at 7 29 20 PM" src="https://github.com/user-attachments/assets/af17fff0-a3d6-41d3-a32b-23886523267f">
+Code that returns stated variables 
+
+<img width="762" alt="Return of variables stated " src="https://github.com/user-attachments/assets/298ee237-96f5-40d9-9601-5f5e6ddf5c0a">
+
 
 ## Features
 - Homepage 
