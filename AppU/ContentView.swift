@@ -6,56 +6,107 @@
 //
 
 import SwiftUI
-import SwiftData
 
+//Create a visual view of content 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        NavigationView {       // Navigation stack structure adapted from LearnEDU.
+        
+            ZStack {      // Zstack structure adapted from Code with Chris
+                Color(.systemHomepageColour)//oringal asset colour
+                    .ignoresSafeArea()
+                
+                //Vstack vertically aligns the page
+                // Vstack structure adapted from Code with Chris
+                VStack(alignment: .center, spacing: 20.0) {
+                  
+                    
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                  
+                    // Front page app design original
+                    Text("Welcome To")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .fontDesign(.monospaced)
+                        .foregroundColor(Color.black)
+                    
+                    Text("Destination")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .fontDesign(.monospaced)
+                        .foregroundColor(Color.black)
+                    
+                    Text("U")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .fontDesign(.monospaced)
+                        .foregroundColor(Color.pink)
+                    
+                    
+                    //HStack horizontally aligns the page, adapted from Code with Chris
+                    HStack {
+                        
+                        // NavigationLink has been added to move the start page over to the Log In page when the custom button LOG IN is pressed
+                       //The use of a navigation learnt from LearnEDU, adapted to my own original views.
+                        NavigationLink(destination: LoginView()) {
+                     
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            
+                            //Image LogInButton has been retrieved from assets and made clickable via navigation link. Orignal Login image asset and sizeable code.
+                            Image("LogInButton")
+                                .resizable()
+                                .frame(height:85)
+                                .frame(width:150)
+                            
+                            // NavigationLink with a custom image in the label
+                            NavigationLink(destination: SignUpPage()) {
+                                
+                                Image("SignUpButton") //Orignal asset and rezisable code.
+                                    .resizable()
+                                    .frame(height:75)
+                                    .frame(width:150)
+                                
+                                ZStack {
+                                    Color(.systemHomepageColour)
+                                        .ignoresSafeArea()//oringal asset colour
+                                    
+                                }
+                            }
+                        }
                     }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    
                 }
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+            
         }
     }
 }
+    // Functions to print Login and Sign In, adaptaed from Code with Chris 
+    func LogIn() {
+        print("Log In")
+    }
+    
+    func SignIn() {
+        print("Sign In")
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
+    
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
-}
+            
+        
+    
+
+
